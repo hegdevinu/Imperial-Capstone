@@ -1,14 +1,14 @@
 # Model Card: CTR-GPBO (v2.1)
-**Model Date:** April 2026 | **Version:** 2.1 | **Type:** Bayesian Optimization
+**Model Date:** April 2026 | **Version:** 2.1 | **Type:** Bayesian Optimisation
 
 ---
 
 ## Model Overview
-The **Constrained-Trust-Region Gaussian Process Bayesian Optimizer (CTR-GPBO)** is a sample-efficient optimization framework designed for high-dimensional black-box functions. It was specifically developed to handle "cliff-edge" boundary conditions and non-stationary noise in 2D to 8D search spaces within a strict 20-query budget.
+The **Constrained-Trust-Region Gaussian Process Bayesian Optimiser (CTR-GPBO)** is a sample-efficient optimisation framework designed for high-dimensional black-box functions. It was specifically developed to handle "cliff-edge" boundary conditions and non-stationary noise in 2D to 8D search spaces within a strict 20-query budget.
 
 ## Intended Use
-* **Primary Task:** Global optimization of expensive-to-evaluate black-box functions.
-* **Target Scenarios:** Engineering design, chemical yield optimization, and hyperparameter tuning where $N \le 20$.
+* **Primary Task:** Global optimisation of expensive-to-evaluate black-box functions.
+* **Target Scenarios:** Engineering design, chemical yield optimisation, and hyperparameter tuning where $N \le 20$.
 * **Out-of-Scope:** High-throughput screening where function evaluations are cheap/fast (Random Search or Hyperband are preferred).
 
 ## Optimization Strategy & Evolution
@@ -38,4 +38,4 @@ Performance is measured by the **Best Observed Value (Max $y$)** and **Stability
 
 ## Ethical Considerations
 * **Transparency:** Detailed model cards prevent "Black-Box Obscurity." By documenting failures (like the Week 8 regressions), we provide a roadmap for future practitioners.
-* **Environmental Impact:** Prioritizing sample efficiency (20 queries) over exhaustive search reduces the carbon footprint associated with massive GPU-intensive optimization.
+* **Environmental Impact:** Prioritizing sample efficiency (20 queries) over exhaustive search reduces the carbon footprint associated with massive GPU-intensive optimisation.
