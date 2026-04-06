@@ -2,6 +2,5 @@
 This project is used for showcasing the Imperial Capstone work carried out during certification. 
 
 ## 📑 Project Documentation
-For a deep dive into our strategy and data, see our official:
-* [Google-style Model Card](./documentation/Model_Card.md)
-* [BBO Datasheet](./documentation/Datasheet.md)
+- [Google-style Model Card](./Model_Card.md)
+- [BBO Project Datasheet](./Datasheet.md)
