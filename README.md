@@ -20,8 +20,9 @@ This repository documents the 13-week optimization of eight hidden functions (2D
 I utilized **Sobol Sensitivity Analysis** to identify "Master Knobs" in high-dimensional functions (F7, F8). This allowed me to "freeze" low-impact dimensions and achieve 9.99+ scores.
 
 ## Repository Structure
-* `/capstone_data`: Raw `.npy` files for all 20 observations.
-* `/visuals`: Convergence plots and GP uncertainty maps.
 * `CHANGELOG.md`: Detailed week-by-week decision log for all 8 functions.
-
+* `Notebooks/`: Step-by-step Bayesian Optimization for each function.
+* `Capstone Data/`: Versioned NumPy arrays containing 20 weeks of query history.
+* `Visuals/`: Uncertainty maps and sensitivity Sobol charts.
+* `Scripts/`: Core logic for data ingestion and sensitivity modeling.
 ---
