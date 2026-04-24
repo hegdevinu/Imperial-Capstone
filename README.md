@@ -43,4 +43,9 @@ The search path was driven by **Expected Improvement (EI)**. Unlike simple Greed
 ### **C. High-Dimensionality: Sobol Sensitivity**
 To combat the **Curse of Dimensionality** in the 8D Architect (Function 8), I applied **Sobol Sensitivity Analysis** (*Sobol, 2001*). This allowed for "Dimensionality Reduction" by identifying that dimensions $x_5$ and $x_8$ accounted for over 85% of total variance, enabling high-precision micro-tuning in the final weeks.
 
+## 🏁 Project Conclusion
+**Status: Optimization Phase Complete**
+* **Final Leaderboard Entry:** Week 13
+* **Primary Strategy:** Trust-Region Bayesian Optimization with Sobol-driven Sensitivity Analysis.
+* **Key Achievements:** Successfully reclaimed the Function 4 peak after a mid-project regression and broke the 2850 yield barrier on Function 5.
 ---
