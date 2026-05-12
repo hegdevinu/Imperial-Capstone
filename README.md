@@ -1,58 +1,85 @@
-# 🚀 Bayesian Optimization: The Black-Box Capstone Project
-### **Imperial College London | Machine Learning Portfolio**
+# 🌌 Navigating the High-Dimensional Unknown
+### **BBO Capstone Project | Imperial College London**
 
-**Author:** Vinayak Hegde  
-**Final Leaderboard Standing:** #2 (Function 4) | #3 (Function 8)  
-**Objective:** Navigate 8 high-dimensional unknown "Black-Box" landscapes to find absolute global maximums using sparse data and Gaussian Processes.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Status: Success](https://img.shields.io/badge/Status-Project_Completed-green.svg)
+
+> **"In Black-Box Optimization, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
 
 ---
 
-## 🏆 Final Results at a Glance
-| Function | Complexity | Initial Best | **Final Week 13** | Outcome / Insight |
+## 🏆 Final Leaderboard Standings Summary
+| **Rank** | **Function** | **Focus Area** | **Final Score** | **Strategic Outcome** |
 | :--- | :--- | :--- | :--- | :--- |
-| **F1** | 2D | 0.0036 | **0.6766** | **Needle Strike:** Captured the high-intensity spike. |
-| **F2** | 2D | 0.6112 | **0.7426** | **Bracket Success:** Midpoint logic hit the summit. |
-| **F3** | 3D | -0.0348 | **-0.0013** | Reached the theoretical chemical stability ceiling. |
-| **F4** | 4D | -6.7021 | **0.6899** | **#2 Rank:** Recovered from a catastrophic -22.1 crash. |
-| **F5** | 4D | 1088.8 | **2939.9** | **Ridge Scaling:** Successfully scaled exponential ridge. |
-| **F6** | 5D | -0.7142 | **-0.1443** | Reclaimed original peak after local saddle divergence. |
-| **F7** | 6D | 1.3649 | **2.3613** | Maintained steady yield on the 6D plateau. |
-| ****F8** | 8D | 9.5984 | **9.9922** | **#3 Rank:** Mastered precision via dimensionality freezing. |
+| **🥇 #2** | **Function 4** | Warehouse Storage Optimization | **0.6899** | **Recovery Mastery:** From -22.1 to Podium. |
+| **🥇 #3** | **Function 8** | 8D Hyperparameter Tuning | **9.9922** | **Precision Lock:** 6-decimal convergence. |
+| **🚀 Breakthrough** | **Function 2** | Log-Likelihood Ridge Capture | **0.7426** | **Midpoint Bracket:** +21% over baseline. |
+| **🚀 Breakthrough** | **Function 5** | Chemical Yield Scaling | **2939.99** | **Corner Chimney:** Scaling exponential ridges. |
 
 ---
 
-## 🧠 Optimization Strategy & Methodology
+## 📈 The 13-Week Journey: Evolution of Effort
 
-My approach evolved from broad stochastic scouting in the early weeks to a high-precision **Trust-Region Bayesian Optimization** framework.
+This repository documents a 13-week iterative journey of learning from the "Black-Box." The process was defined by three distinct strategic shifts:
 
-### **1. The "Trust-Region" Pivot (Resilience)**
-In Week 8, Function 4 suffered a massive regression (-22.1). I moved from global exploration to a **Hard-Bound Trust Region**, manually constraining the search to a 5% radius around historical successes. This allowed for the massive recovery seen in the final results.
+### **Phase 1: Global Scouting (Weeks 1-4)**
+* **Strategy:** Latin Hypercube Sampling (LHS) & High-Jitter Acquisition.
+* **Goal:** Map the broad contours of the search space.
+* **Outcome:** Established "Islands of Success" across all 8 functions, identifying initial gradients.
 
-### **2. Dimensionality Freezing (Combatting the Curse)**
-To handle the 8D complexity of Function 8, I utilized **Sobol Sensitivity Analysis**. By identifying that $x_5$ and $x_8$ were the primary "Master Knobs" driving variance, I locked the other six dimensions, allowing the model to converge on the **9.9922** peak.
+### **Phase 2: The "Cliff Crisis" & Pivot (Weeks 5-8)**
+* **The Setback:** Function 4 hit a hidden "cliff," plummeting from a stable positive score to **-22.1**.
+* **The Realization:** Standard Bayesian Optimization was "chasing shadows." The model was over-fitting to outliers in a sparse landscape.
+* **The Pivot:** Switched to **Trust-Region Constraints**. I moved from global search to **Local Peak Refinement**, bounding queries to a 5% radius of known success.
 
-### **3. Terrain Analysis & Slicing**
-I utilized **Gaussian Process Slicing** to generate 3D topography maps. By holding non-critical variables at their optimal values, I could visualize the "ridges" and "valleys," justifying aggressive moves in Functions 2 and 5.
+### **Phase 3: Surgical Exploitation (Weeks 9-13)**
+* **Strategy:** Dimensionality Freezing & Midpoint Bracketing.
+* **Achievement:** Finalized top-3 leaderboard spots.
+* **Final Rounds:** Utilized 6-decimal precision **"Golden Queries"** to strike the absolute summits.
 
 ---
 
-## 🛠️ Repository Structure
+## ⛰️ Visual Evidence: The Optimization Terrain
 
-```text
-├── notebooks/          # Weekly iteration logs (F1 to F8)
-├── capstone_data/      # Normalized .npy data files for all 13 weeks
-├── visuals/            # 3D terrain maps & convergence reports
-├── scripts/            # Automated data_manager.py for syncing
-└── README.md           # Project executive summary
+Success was driven by **Terrain Slicing**. By generating 3D topography maps using Gaussian Process predictions, I visualized the landscape while distinguishing between:
+1.  **Base Data:** The initial "cold start" state of the function.
+2.  **Historical Queries:** The iterative path taken over 13 weeks.
+3.  **The Recommendation:** The final "Summit Strike" target.
 
+### **Strategic Highlights:**
+* **Function 5 (The Exponential Chimney):** Visualized as a steep ridge moving toward the (1,1) corner. The terrain justified an aggressive push that broke the **2900 barrier**.
+* **Function 2 (The Midpoint Bracket):** After overstepping the ridge in Week 12, the 2D heatmap showed the peak was trapped between two points. The **Geometric Midpoint** move captured the **0.74** summit.
 
+---
 
+## 🛠️ Technical Implementation
 
+### **The Engine**
+Built from the ground up using **Scikit-Learn's Gaussian Process Regressor**, allowing for manual control over:
+* **ARD (Automatic Relevance Determination):** Identifying "Master Knobs" in high-D space.
+* **Matern 2.5 Kernels:** Optimized for the "cliff-heavy" nature of warehouse and chemical functions.
+* **Custom Acquisition:** A dynamic blend of **Expected Improvement (EI)** and **Upper Confidence Bound (UCB)**.
 
+### **The "Master Knob" Strategy**
+In Function 8 (8D), the "Curse of Dimensionality" makes exploration nearly impossible. My breakthrough came from **Dimensionality Freezing**:
+1.  Performed **Sobol Sensitivity Analysis** on historical data points.
+2.  Identified that $x_5$ and $x_8$ were responsible for **92% of variance**.
+3.  Locked the other 6 dimensions, turning an 8D search into a high-precision 2D strike.
 
+---
 
+## 📂 Repository Structure
 
-
+```bash
+├── notebooks/          # Chronological record of effort (Weeks 1-13)
+│   ├── 01_Function_1.ipynb   # 2D Radiation Scout
+│   ├── 04_Function_4.ipynb   # The Recovery Strategy
+│   └── 08_Function_8.ipynb   # 8D Precision Tuning
+├── visuals/            # GP Slices & 3D Topography Maps
+├── capstone_data/      # initial_data/ & weekly_updates/
+├── scripts/            # Data-update-Manager & Terrain Generators
+└── README.md           # Executive Project Case Study
 
 
 
