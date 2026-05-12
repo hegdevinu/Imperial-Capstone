@@ -9,6 +9,93 @@
 
 ---
 
+## 🏆 Comprehensive Leaderboard Performance Audit
+
+This table provides a transparent audit of my performance across all 8 functions. I define success not just by rank, but by the **Adaptability** shown in recovering from regressions and the **Precision** used in high-dimensional convergence.
+
+| Function | Complexity | **Final Rank** | **Best Score** | **Strategic Status** | **The Technical Highlight** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **F4** | 4D | **#3** | 0.6899 | **🚀 Major Success** | **Recovery Mastery:** Reclaimed top-3 after a mid-project crash to -22.1. |
+| **F8** | 8D | **#4** | 9.9922 | **🚀 Major Success** | **Precision Lock:** 6-decimal convergence via Dimensionality Freezing. |
+| **F3** | 3D | **#5** | -0.0013 | **✅ Success** | Reached the theoretical stability ceiling for drug discovery. |
+| **F1** | 2D | **#6** | 0.6766 | **✅ Success** | Targeted the "Needle" center using High-Resolution Slicing. |
+| **F6** | 5D | **#11** | -0.1443 | **🔄 Recovery** | Balanced yield against steep cliffs to return to a stable peak. |
+| **F2** | 2D | **#13** | 0.7426 | **⚡ Breakthrough** | Used **Midpoint Bracketing** to jump +21% over previous best. |
+| **F7** | 6D | **#25** | 2.3613 | **⚠️ Stalled** | **Plateau Trap:** Maintained stability but failed to scale the final summit. |
+| **F5** | 4D | **#45** | 2939.99 | **❌ Failure** | **Local Optima Trap:** Scaled a "Chimney" ridge but missed the global spike. |
+
+---
+
+## 🔍 Critical Analysis: Successes vs. Failures
+
+### **The Masterstrokes (F4, F8, F2)**
+* **The Pivot (Function 4):** The defining effort of the project. After hitting a hidden "cliff" (-22.1), I realized the model was over-fitting to outliers. By implementing a **Trust-Region Constraint**, I manually "fenced in" the optimizer, forcing it to climb back safely from the abyss.
+* **Dimensionality Freezing (Function 8):** In a massive 8D search space, traditional exploration is a "hit or miss" game. I utilized **Sobol Sensitivity Analysis** to identify the "Master Knobs." By freezing 6 of the 8 variables, I transformed an impossible 8D search into a high-precision 2D strike.
+
+
+
+### **The "Local Optima" Lessons (F5, F7)**
+* **The Chimney Trap (Function 5):** While my final yield of 2939.99 was a local record, the leaderboard reveals this was a failure of global exploration. My model identified an aggressive "ridge" and I exploited it prematurely, missing a much sharper, high-magnitude peak elsewhere. This taught me that **premature exploitation** is the greatest risk in exponential landscapes.
+* **The Plateau (Function 7):** In the 6D space, my strategy became too conservative. I stayed on the "High Ground" to protect my score, but failed to venture into the high-variance zones that likely held the global maximum.
+
+---
+
+## ⛰️ Visual Evidence: Mapping the Search
+
+Success was driven by **Terrain Slicing**. I generated 3D topography maps using Gaussian Process predictions to visualize the landscape. Crucially, my process distinguished between:
+
+1.  **Base Data:** The initial "cold start" points provided.
+2.  **Historical Queries:** The iterative path (and mistakes) taken over 13 weeks.
+3.  **The Recommendation:** The final "Summit Strike" target based on the highest **Probability of Improvement (PI)**.
+
+
+
+---
+
+## 🛠️ Technical Implementation & Engine
+
+Built from the ground up using **Scikit-Learn's Gaussian Process Regressor**, allowing for manual control over:
+* **ARD (Automatic Relevance Determination):** Pruning insensitive dimensions to speed up convergence.
+* **Matern 2.5 Kernels:** Selected specifically for the "cliff-heavy" nature of warehouse and chemical functions.
+* **Custom Acquisition:** A dynamic blend of **Expected Improvement (EI)** and **Upper Confidence Bound (UCB)**, tuned weekly based on the observed data noise.
+
+---
+
+## 📂 Project Structure
+
+```bash
+├── notebooks/          # Chronological record of effort (Weeks 1-13)
+│   ├── 04_Function_4.ipynb   # The Recovery Journey
+│   └── 08_Function_8.ipynb   # 8D Precision Tuning
+├── visuals/            # GP Slices & Topography Maps
+├── capstone_data/      # initial_data & weekly_updates
+└── README.md           # Executive Project Case Study
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 🌌 Navigating the High-Dimensional Unknown
+### **BBO Capstone Project | Imperial College London**
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Status: Success](https://img.shields.io/badge/Status-Project_Completed-green.svg)
+
+> **"In Black-Box Optimization, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
+
+---
+
 ## 🏆 Final Leaderboard Standings Summary
 | **Rank** | **Function** | **Focus Area** | **Final Score** | **Strategic Outcome** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -81,7 +168,78 @@ In Function 8 (8D), the "Curse of Dimensionality" makes exploration nearly impos
 ├── scripts/            # Data-update-Manager & Terrain Generators
 └── README.md           # Executive Project Case Study
 
+# 🌌 Navigating the High-Dimensional Unknown
+### **BBO Capstone Project | Imperial College London**
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Status: Success](https://img.shields.io/badge/Status-Project_Completed-green.svg)
+
+> **"In Black-Box Optimization, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
+
+---
+
+## 🏆 Comprehensive Leaderboard Performance Audit
+
+This table provides a transparent audit of my performance across all 8 functions. I define success not just by rank, but by the **Adaptability** shown in recovering from regressions and the **Precision** used in high-dimensional convergence.
+
+| Function | Complexity | **Final Rank** | **Best Score** | **Strategic Status** | **The Technical Highlight** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **F4** | 4D | **#3** | 0.6899 | **🚀 Major Success** | **Recovery Mastery:** Reclaimed top-3 after a mid-project crash to -22.1. |
+| **F8** | 8D | **#4** | 9.9922 | **🚀 Major Success** | **Precision Lock:** 6-decimal convergence via Dimensionality Freezing. |
+| **F3** | 3D | **#5** | -0.0013 | **✅ Success** | Reached the theoretical stability ceiling for drug discovery. |
+| **F1** | 2D | **#6** | 0.6766 | **✅ Success** | Targeted the "Needle" center using High-Resolution Slicing. |
+| **F6** | 5D | **#11** | -0.1443 | **🔄 Recovery** | Balanced yield against steep cliffs to return to a stable peak. |
+| **F2** | 2D | **#13** | 0.7426 | **⚡ Breakthrough** | Used **Midpoint Bracketing** to jump +21% over previous best. |
+| **F7** | 6D | **#25** | 2.3613 | **⚠️ Stalled** | **Plateau Trap:** Maintained stability but failed to scale the final summit. |
+| **F5** | 4D | **#45** | 2939.99 | **❌ Failure** | **Local Optima Trap:** Scaled a "Chimney" ridge but missed the global spike. |
+
+---
+
+## 🔍 Critical Analysis: Successes vs. Failures
+
+### **The Masterstrokes (F4, F8, F2)**
+* **The Pivot (Function 4):** The defining effort of the project. After hitting a hidden "cliff" (-22.1), I realized the model was over-fitting to outliers. By implementing a **Trust-Region Constraint**, I manually "fenced in" the optimizer, forcing it to climb back safely from the abyss.
+* **Dimensionality Freezing (Function 8):** In a massive 8D search space, traditional exploration is a "hit or miss" game. I utilized **Sobol Sensitivity Analysis** to identify the "Master Knobs." By freezing 6 of the 8 variables, I transformed an impossible 8D search into a high-precision 2D strike.
+
+
+
+### **The "Local Optima" Lessons (F5, F7)**
+* **The Chimney Trap (Function 5):** While my final yield of 2939.99 was a local record, the leaderboard reveals this was a failure of global exploration. My model identified an aggressive "ridge" and I exploited it prematurely, missing a much sharper, high-magnitude peak elsewhere. This taught me that **premature exploitation** is the greatest risk in exponential landscapes.
+* **The Plateau (Function 7):** In the 6D space, my strategy became too conservative. I stayed on the "High Ground" to protect my score, but failed to venture into the high-variance zones that likely held the global maximum.
+
+---
+
+## ⛰️ Visual Evidence: Mapping the Search
+
+Success was driven by **Terrain Slicing**. I generated 3D topography maps using Gaussian Process predictions to visualize the landscape. Crucially, my process distinguished between:
+
+1.  **Base Data:** The initial "cold start" points provided.
+2.  **Historical Queries:** The iterative path (and mistakes) taken over 13 weeks.
+3.  **The Recommendation:** The final "Summit Strike" target based on the highest **Probability of Improvement (PI)**.
+
+
+
+---
+
+## 🛠️ Technical Implementation & Engine
+
+Built from the ground up using **Scikit-Learn's Gaussian Process Regressor**, allowing for manual control over:
+* **ARD (Automatic Relevance Determination):** Pruning insensitive dimensions to speed up convergence.
+* **Matern 2.5 Kernels:** Selected specifically for the "cliff-heavy" nature of warehouse and chemical functions.
+* **Custom Acquisition:** A dynamic blend of **Expected Improvement (EI)** and **Upper Confidence Bound (UCB)**, tuned weekly based on the observed data noise.
+
+---
+
+## 📂 Project Structure
+
+```bash
+├── notebooks/          # Chronological record of effort (Weeks 1-13)
+│   ├── 04_Function_4.ipynb   # The Recovery Journey
+│   └── 08_Function_8.ipynb   # 8D Precision Tuning
+├── visuals/            # GP Slices & Topography Maps
+├── capstone_data/      # initial_data & weekly_updates
+└── README.md           # Executive Project Case Study
 
 
 # Black-Box Optimization (BBO) Capstone
