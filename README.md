@@ -1,3 +1,62 @@
+# 🚀 Bayesian Optimization: The Black-Box Capstone Project
+### **Imperial College London | Machine Learning Portfolio**
+
+**Author:** Vinayak Hegde  
+**Final Leaderboard Standing:** #2 (Function 4) | #3 (Function 8)  
+**Objective:** Navigate 8 high-dimensional unknown "Black-Box" landscapes to find absolute global maximums using sparse data and Gaussian Processes.
+
+---
+
+## 🏆 Final Results at a Glance
+| Function | Complexity | Initial Best | **Final Week 13** | Outcome / Insight |
+| :--- | :--- | :--- | :--- | :--- |
+| **F1** | 2D | 0.0036 | **0.6766** | **Needle Strike:** Captured the high-intensity spike. |
+| **F2** | 2D | 0.6112 | **0.7426** | **Bracket Success:** Midpoint logic hit the summit. |
+| **F3** | 3D | -0.0348 | **-0.0013** | Reached the theoretical chemical stability ceiling. |
+| **F4** | 4D | -6.7021 | **0.6899** | **#2 Rank:** Recovered from a catastrophic -22.1 crash. |
+| **F5** | 4D | 1088.8 | **2939.9** | **Ridge Scaling:** Successfully scaled exponential ridge. |
+| **F6** | 5D | -0.7142 | **-0.1443** | Reclaimed original peak after local saddle divergence. |
+| **F7** | 6D | 1.3649 | **2.3613** | Maintained steady yield on the 6D plateau. |
+| ****F8** | 8D | 9.5984 | **9.9922** | **#3 Rank:** Mastered precision via dimensionality freezing. |
+
+---
+
+## 🧠 Optimization Strategy & Methodology
+
+My approach evolved from broad stochastic scouting in the early weeks to a high-precision **Trust-Region Bayesian Optimization** framework.
+
+### **1. The "Trust-Region" Pivot (Resilience)**
+In Week 8, Function 4 suffered a massive regression (-22.1). I moved from global exploration to a **Hard-Bound Trust Region**, manually constraining the search to a 5% radius around historical successes. This allowed for the massive recovery seen in the final results.
+
+### **2. Dimensionality Freezing (Combatting the Curse)**
+To handle the 8D complexity of Function 8, I utilized **Sobol Sensitivity Analysis**. By identifying that $x_5$ and $x_8$ were the primary "Master Knobs" driving variance, I locked the other six dimensions, allowing the model to converge on the **9.9922** peak.
+
+### **3. Terrain Analysis & Slicing**
+I utilized **Gaussian Process Slicing** to generate 3D topography maps. By holding non-critical variables at their optimal values, I could visualize the "ridges" and "valleys," justifying aggressive moves in Functions 2 and 5.
+
+---
+
+## 🛠️ Repository Structure
+
+```text
+├── notebooks/          # Weekly iteration logs (F1 to F8)
+├── capstone_data/      # Normalized .npy data files for all 13 weeks
+├── visuals/            # 3D terrain maps & convergence reports
+├── scripts/            # Automated data_manager.py for syncing
+└── README.md           # Project executive summary
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Black-Box Optimization (BBO) Capstone
 **Adaptive Bayesian Optimization with Trust-Region Recovery**
 
