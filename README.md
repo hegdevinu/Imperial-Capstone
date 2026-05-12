@@ -5,13 +5,13 @@
 ![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Status: Success](https://img.shields.io/badge/Status-Project_Completed-green.svg)
 
-> **"In Black-Box Optimization, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
+> **"MY KEY LEARNING - In Black-Box Optimization, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
 
 ---
 
 ## 🏆 Comprehensive Leaderboard Performance Audit
 
-This table provides a transparent audit of my performance across all 8 functions. I define success not just by rank, but by the **Adaptability** shown in recovering from regressions and the **Precision** used in high-dimensional convergence.
+This table provides a transparent audit of my performance across all 8 functions. 
 
 | Function | Complexity | **Final Rank** | **Best Score** | **Strategic Status** | **The Technical Highlight** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
