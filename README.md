@@ -5,7 +5,7 @@
 ![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Status: Success](https://img.shields.io/badge/Status-Project_Completed-green.svg)
 
-> **"MY KEY LEARNING - In Black-Box Optimization, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
+> **"MY KEY LEARNING - In Black-Box Optimisation, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
 
 ---
 
@@ -37,7 +37,7 @@ This repository documents a 13-week iterative journey of learning from the "Blac
 
 ### **Phase 2: The "Cliff Crisis" & Pivot (Weeks 5-8)**
 * **The Setback:** Function 4 hit a hidden "cliff," plummeting from a stable positive score to **-22.1**.
-* **The Realization:** Standard Bayesian Optimization was "chasing shadows." The model was over-fitting to outliers in a sparse landscape.
+* **The Realization:** Standard Bayesian Optimisation was "chasing shadows." The model was over-fitting to outliers in a sparse landscape.
 * **The Pivot:** Switched to **Trust-Region Constraints**. I moved from global search to **Local Peak Refinement**, bounding queries to a 5% radius of known success.
 
 ### **Phase 3: Surgical Exploitation (Weeks 9-13)**
@@ -63,7 +63,7 @@ This repository documents a 13-week iterative journey of learning from the "Blac
 
 ## ⛰️ Visual Evidence & Topographical Audit
 
-To navigate high-dimensional spaces (up to 8D), the optimization engine relied on **Gaussian Process Slicing** to project complex manifolds into readable 2D/3D visual fields. 
+To navigate high-dimensional spaces (up to 8D), the Optimisation engine relied on **Gaussian Process Slicing** to project complex manifolds into readable 2D/3D visual fields. 
 
 Crucially, my visualization pipeline distinguished between:
 1. **Base Data:** The initial "cold start" points provided at Phase 1.
@@ -85,9 +85,9 @@ Crucially, my visualization pipeline distinguished between:
 
 ## 🛠️ Technical Methodology & Rationale
 
-The optimization engine was built from the ground up on three pillars of Bayesian Optimization (BO) theory, prioritizing transparency and manual control over high-level automation.
+The Optimisation engine was built from the ground up on three pillars of Bayesian Optimisation (BO) theory, prioritizing transparency and manual control over high-level automation.
 
-### **A. Surrogate Modeling: Gaussian Process (GP)**
+### **A. Surrogate Modelling: Gaussian Process (GP)**
 I utilized **Gaussian Process Regression** (via `scikit-learn`) as the core surrogate model. GPs were selected because they provide a full probability distribution over the function space, allowing for formal **Uncertainty Quantification (UQ)**.
 
 * **Kernel Selection:** I implemented the **Matérn 5/2 kernel**. Unlike the Squared Exponential kernel, the Matérn 5/2 does not assume infinite smoothness, making it the preferred choice in BBO literature (*Snoek et al., 2012*) for handling the "cliffs" and non-smooth transitions observed in Functions 4 and 7.
@@ -113,8 +113,8 @@ To combat the **Curse of Dimensionality** in the 8D Architect (Function 8), I ap
 ├── notebooks/                # Chronological record of effort (Weeks 1-13)
 ├── visuals/                  # GP Slices & Topography Maps
 ├── capstone_data/            # initial_data & weekly_updates
-├── scripts/                  # Python scripts for automated data management and sensitivity modeling.
-├── documentation/changelogs  # Week-by-week audit trail of optimization decisions. Incomplete as started late.
+├── scripts/                  # Python scripts for automated data management and sensitivity Modelling.
+├── documentation/changelogs  # Week-by-week audit trail of Optimisation decisions. Incomplete as started late.
 ├── README.md                 # Executive Project Case Study
 ├── VISUAL_COMMENTARY.md      # Final terrain analysis
 └── MODEL_CARD.md             # Detailed deep-dive into the CTR-GPBO strategy.
