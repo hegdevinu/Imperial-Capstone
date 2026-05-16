@@ -3,12 +3,12 @@
 ## Function Overview
 
 1. **Which function does this datasheet describe?**
-   This master datasheet tracks the aggregate optimization profiles for **Functions 1 through 8** evaluated during the 13-week Black-Box Optimisation challenge.
+   This master datasheet tracks the aggregate optimisation profiles for **Functions 1 through 8** evaluated during the 13-week Black-Box Optimisation challenge.
 
 2. **What real-world scenario does this function simulate?**
    The dataset spans multiple simulated engineering and scientific domains:
    * **Low-D (2D–3D):** Radiation source localization (F1), Log-likelihood tracking (F2), and biochemical drug discovery (F3).
-   * **Mid-D (4D–5D):** Industrial warehouse layout optimization (F4), chemical synthesis yield scaling (F5), and culinary recipe synthesis (F6).
+   * **Mid-D (4D–5D):** Industrial warehouse layout optimisation (F4), chemical synthesis yield scaling (F5), and culinary recipe synthesis (F6).
    * **High-D (6D–8D):** Multi-parameter machine learning model hyperparameter tuning (F7 & F8).
 
 3. **What is the dimensionality of the input?**
@@ -67,10 +67,10 @@
    Yes, most notably in **Function 5**. The model encountered an active local ridge and plateaued at a yield score of **2939.99**. Local optima were detected when subsequent expected improvement projections flattened to zero despite entering completely new coordinate zones.
 
 3. **Which queried inputs were most informative and why?**
-   Boundary and cliff edge points were highly informative for defining safety limits, while **Geometric Midpoints** proved highly effective for capturing narrow summits trapped between two known points, as shown in the Function 2 optimization run.
+   Boundary and cliff edge points were highly informative for defining safety limits, while **Geometric Midpoints** proved highly effective for capturing narrow summits trapped between two known points, as shown in the Function 2 optimisation run.
 
 4. **If you restarted, what would you do differently?**
-   I would implement a more aggressive global exploration strategy during the early rounds of Function 5 to avoid becoming prematurely trapped on the corner ridge. I would also introduce an automated multi-start optimization routine like TurBO to better balance exploration and exploitation across all functions.
+   I would implement a more aggressive global exploration strategy during the early rounds of Function 5 to avoid becoming prematurely trapped on the corner ridge. I would also introduce an automated multi-start optimisation routine like TurBO to better balance exploration and exploitation across all functions.
 
 ---
 
