@@ -69,14 +69,14 @@ Success was driven by **Terrain Slicing**. I generated 3D topography maps using 
 2.  **Historical Queries:** The iterative path (and mistakes) taken over 13 weeks.
 3.  **The Recommendation:** The final "Summit Strike" target based on the highest **Probability of Improvement (PI)**.
 
-![Function 1 Terrain Analysis](../visuals/F1_terrain_analysis.png)
-![Function 2 Terrain Analysis](../visuals/F2_terrain_analysis.png)
-![Function 3 Terrain Analysis](../visuals/F3_terrain_analysis.png)
-![Function 4 Terrain Analysis](../visuals/F4_terrain_analysis.png)
-![Function 5 Terrain Analysis](../visuals/F5_terrain_analysis.png)
-![Function 6 Terrain Analysis](../visuals/F6_terrain_analysis.png)
-![Function 7 Terrain Analysis](../visuals/F7_terrain_analysis.png)
-![Function 8 Terrain Analysis](../visuals/F8_terrain_analysis.png)
+![Function 1 Terrain Analysis](./visuals/F1_terrain_analysis.png)
+![Function 2 Terrain Analysis](./visuals/F2_terrain_analysis.png)
+![Function 3 Terrain Analysis](./visuals/F3_terrain_analysis.png)
+![Function 4 Terrain Analysis](./visuals/F4_terrain_analysis.png)
+![Function 5 Terrain Analysis](./visuals/F5_terrain_analysis.png)
+![Function 6 Terrain Analysis](./visuals/F6_terrain_analysis.png)
+![Function 7 Terrain Analysis](./visuals/F7_terrain_analysis.png)
+![Function 8 Terrain Analysis](./visuals/F8_terrain_analysis.png)
 
 ---
 
