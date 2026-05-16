@@ -61,22 +61,25 @@ This repository documents a 13-week iterative journey of learning from the "Blac
 
 ---
 
-## ⛰️ Visual Evidence: Mapping the Search
+## ⛰️ Visual Evidence & Topographical Audit
 
-Success was driven by **Terrain Slicing**. I generated 3D topography maps using Gaussian Process predictions to visualize the landscape. Crucially, my process distinguished between:
+To navigate high-dimensional spaces (up to 8D), the optimization engine relied on **Gaussian Process Slicing** to project complex manifolds into readable 2D/3D visual fields. 
 
-1.  **Base Data:** The initial "cold start" points provided.
-2.  **Historical Queries:** The iterative path (and mistakes) taken over 13 weeks.
-3.  **The Recommendation:** The final "Summit Strike" target based on the highest **Probability of Improvement (PI)**.
+Crucially, my visualization pipeline distinguished between:
+1. **Base Data:** The initial "cold start" points provided at Phase 1.
+2. **Historical Queries:** The 13-week chronological trajectory (including structural regressions).
+3. **The Recommendation:** The final high-PI (Probability of Improvement) "Summit Strike" target.
 
-![Function 1 Terrain Analysis](./visuals/F1_terrain_analysis.png)
-![Function 2 Terrain Analysis](./visuals/F2_terrain_analysis.png)
-![Function 3 Terrain Analysis](./visuals/F3_terrain_analysis.png)
-![Function 4 Terrain Analysis](./visuals/F4_terrain_analysis.png)
-![Function 5 Terrain Analysis](./visuals/F5_terrain_analysis.png)
-![Function 6 Terrain Analysis](./visuals/F6_terrain_analysis.png)
-![Function 7 Terrain Analysis](./visuals/F7_terrain_analysis.png)
-![Function 8 Terrain Analysis](./visuals/F8_terrain_analysis.png)
+> 📖 **Deep-Dive Technical Commentary:** > I have compiled a comprehensive, function-by-function post-mortem report analyzing the spatial architecture of all 8 functions. This includes detailed breakdowns of why the model succeeded on the **Function 4 Canyon** and how it fell into the **Function 5 Local Optima Trap**.
+> 
+> 👉 **[Read the Full Topographical Audit & Visual Commentary Here](./VISUAL_COMMENTARY.md)**
+
+### 🖼️ Landscape Gallery Highlights
+
+| **Function 4 (4D Warehouse)** | **Function 8 (8D Architect)** |
+| :---: | :---: |
+| ![F4 Canyon](./visuals/F4_terrain_analysis.png) | ![F8 Dome](./visuals/F8_terrain_analysis.png) |
+| *#3 Rank Recovery out of the -22.1 valley.* | *#4 Rank achieved via 2D Dimensionality Freezing.* |
 
 ---
 
