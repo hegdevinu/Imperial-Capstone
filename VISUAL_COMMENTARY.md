@@ -63,7 +63,7 @@ Each visualization is constructed via **Gaussian Process Slicing**, projecting h
 
 ### 📍 Function 7: The Summit Plateau (6D Space)
 * **Visual Profile:** A wide, sweeping, high-altitude dome with a remarkably flat crest.
-* **Technical Commentary:** This explains my **#25 position (Stalled)**. The broad, uniform yellow zone means the local gradient became virtually zero ($\nabla f \approx 0$) at the top. The surrogate model lacked the directional data to distinguish between micro-variations on the crest, causing the optimization steps to stall on a high plateau without hitting the true pinpoint peak.
+* **Technical Commentary:** This explains my **#25 position (Stalled)**. The broad, uniform yellow zone means the local gradient became virtually zero ($\nabla f \approx 0$) at the top. The surrogate model lacked the directional data to distinguish between micro-variations on the crest, causing the optimisation steps to stall on a high plateau without hitting the true pinpoint peak.
 
 ![Function 8 Terrain Analysis](./visuals/F8_terrain_analysis.png)
 
