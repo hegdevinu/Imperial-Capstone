@@ -28,7 +28,7 @@ Each visualization is constructed via **Gaussian Process Slicing**, projecting h
 ![Function 1 Terrain Analysis](./visuals/F1_terrain_analysis.png)
 
 * **Visual Profile:** A vast, mathematically flat plateau ($y \approx 0.0$) interrupted by an extremely narrow, localized "volcanic" spire.
-* **Technical Commentary:** The 3D landscape visually proves why traditional global exploration is inefficient here. Missing the spike by even $0.05$ units drops the reward to baseline. The visual justifies the **Week 13 Micro-Squeeze**, where the cyan star was placed squarely on the rim of the crater to achieve a final position of **#6 globally**.
+* **Technical Commentary:** The 3D landscape visually proves why traditional global exploration is inefficient here. Missing the spike by even $0.05$ units drops the reward to baseline. The visual justifies the **Week 13 Micro-Squeeze**, where the cyan star was placed squarely on the rim of the crater to achieve a final position of **#6 on leaderboard**.
 
 ### 📍 Function 2: 2D Noisy Landscape Optimisation
 
@@ -49,7 +49,7 @@ Each visualization is constructed via **Gaussian Process Slicing**, projecting h
 ![Function 4 Terrain Analysis](./visuals/F4_terrain_analysis.png)
 
 * **Visual Profile:** A steep, localized ridge bordered by massive, drop-off "cliffs" falling into deep negative valleys ($y \approx -20.0$).
-* **Technical Commentary:** This visualization is the empirical justification for the **Trust-Region Pivot**. The 3D model shows the exact "canyon wall" that caused the mid-project crash to $-22.1$. By constraining the acquisition search area to a tight 5% radius, the optimizer safely crawled up the cliffside to secure a **#3 global ranking**.
+* **Technical Commentary:** This visualization is the empirical justification for the **Trust-Region Pivot**. The 3D model shows the exact "canyon wall" that caused the mid-project crash to $-22.1$. By constraining the acquisition search area to a tight 5% radius, the optimizer safely crawled up the cliffside to secure a **#3 on leaderboard**.
 
 ### 📍 Function 5: 4D Unimodal Chemical Yield
 
@@ -77,7 +77,7 @@ Each visualization is constructed via **Gaussian Process Slicing**, projecting h
 ![Function 8 Terrain Analysis](./visuals/F8_terrain_analysis.png)
 
 * **Visual Profile:** Projecting this 8D space into a 3D slice reveals a beautifully symmetric, continuous dome.
-* **Technical Commentary:** Despite the smooth geometry, navigating this space globally is paralyzed by the *Curse of Dimensionality*. This plot validates the **Master Knob Strategy**: by running a Sobol analysis and realizing $x_5$ and $x_8$ controlled the topology, we froze the remaining 6 dimensions. This reduced the problem to the exact 2D dome visible in the plot, enabling the micro-tuning required to lock in a **#4 global rank (9.9922)**.
+* **Technical Commentary:** Despite the smooth geometry, navigating this space globally is paralyzed by the *Curse of Dimensionality*. This plot validates the **Master Knob Strategy**: by running a Sobol analysis and realizing $x_5$ and $x_8$ controlled the topology, we froze the remaining 6 dimensions. This reduced the problem to the exact 2D dome visible in the plot, enabling the micro-tuning required to lock in a **#4 on leaderboard (9.9922)**.
 
 ---
 
