@@ -110,11 +110,11 @@ To combat the **Curse of Dimensionality** in the 8D Architect (Function 8), I ap
 ## 📂 Project Structure
 
 ```bash
-├── notebooks/          # Chronological record of effort (Weeks 1-13)
-├── visuals/            # GP Slices & Topography Maps
-├── capstone_data/      # initial_data & weekly_updates
-├── scripts/            # Python scripts for automated data management and sensitivity modeling.
-├── README.md           # Executive Project Case Study
-├── VISUAL_COMMENTARY.md# Final terrain analysis
-├── MODEL_CARD.md       # Detailed deep-dive into the CTR-GPBO strategy.
-└── CHANGELOG.md        # Week-by-week audit trail of optimization decisions. Incomplete as started late.
+├── notebooks/                # Chronological record of effort (Weeks 1-13)
+├── visuals/                  # GP Slices & Topography Maps
+├── capstone_data/            # initial_data & weekly_updates
+├── scripts/                  # Python scripts for automated data management and sensitivity modeling.
+├── documentation/changelogs  # Week-by-week audit trail of optimization decisions. Incomplete as started late.
+├── README.md                 # Executive Project Case Study
+├── VISUAL_COMMENTARY.md      # Final terrain analysis
+└── MODEL_CARD.md             # Detailed deep-dive into the CTR-GPBO strategy.
