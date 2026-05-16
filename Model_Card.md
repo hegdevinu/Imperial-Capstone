@@ -1,41 +1,39 @@
-# Model Card: CTR-GPBO (v2.1)
-**Model Date:** April 2026 | **Version:** 2.1 | **Type:** Bayesian Optimisation
+# Model Card: Custom Gaussian Process Optimisation Engine
+
+## Model Description
+
+**Input:** Continuous numerical vectors representing multi-dimensional search coordinate spaces ranging from 2D (Functions 1 & 2) up to 8D (Function 8). The input space boundaries are bounded according to specific system design limits (e.g., coordinate constraints for warehouse layouts, chemical mixture ratios, and hyperparameter bounding boxes).
+
+**Output:** A scalar value $y$ representing an unobserved black-box target performance metric, including radioactive intensity (F1), log-likelihood score (F2), drug discovery chemical stability (F3), warehouse storage efficiency (F4), manufacturing process yield (F5), recipe rating (F6), and machine learning hyperparameter scores (F7 & F8).
+
+**Model Architecture:**
+The surrogate model is built from the ground up using a non-automated **Gaussian Process Regressor (GPR)** via `scikit-learn`.
+* **Kernel Configuration:** A foundational **Matérn 5/2 kernel** combined with an automated white-noise variance parameter. The Matérn 5/2 kernel was selected globally because it relaxes the infinite differentiability assumption of the Squared Exponential kernel, allowing the model to adapt gracefully to the sharp, non-smooth gradients ("cliffs") observed across the landscapes.
+* **Dimensionality Management:** Employs **Automatic Relevance Determination (ARD)** via custom length-scale vectors for coordinate pruning, paired with an upstream analytical **Sobol Sensitivity Analysis** routine for high-dimensional structures.
+* **Decision Framework (Acquisition):** A dynamic, manually adjusted framework blending **Expected Improvement (EI)** and **Upper Confidence Bound (UCB)** algorithms to balance exploration and exploitation phases over a 13-week loop.
 
 ---
 
-## Model Overview
-The **Constrained-Trust-Region Gaussian Process Bayesian Optimiser (CTR-GPBO)** is a sample-efficient optimisation framework designed for high-dimensional black-box functions. It was specifically developed to handle "cliff-edge" boundary conditions and non-stationary noise in 2D to 8D search spaces within a strict 20-query budget.
+## Performance
 
-## Intended Use
-* **Primary Task:** Global optimisation of expensive-to-evaluate black-box functions.
-* **Target Scenarios:** Engineering design, chemical yield optimisation, and hyperparameter tuning where $N \le 20$.
-* **Out-of-Scope:** High-throughput screening where function evaluations are cheap/fast (Random Search or Hyperband are preferred).
+The engine's performance is measured using absolute yield improvement from a sparse "cold start" baseline over 13 evaluation iterations, verified directly against the live Imperial Capstone leaderboard.
 
-## Optimization Strategy & Evolution
-The model underwent a three-phase evolution over 11 weeks of deployment:
-1.  **Global Scouting (Weeks 1–5):** Used Matérn 5/2 kernels and high-jitter Acquisition Functions to map the global landscape and identify "Islands of Success.". There was resonable success in some functions. 
-2.  **Framework Stress Test (Weeks 7–8):** Integrated HEBO and Optuna. This phase identified critical failure modes: these advanced models overfit to noise in sparse 4D and 6D spaces, leading to "cliff hits.". New techniques tried were failures due to limited data points.
-3.  **Surgical Recovery (Weeks 9–11):** Transitioned to a **Trust Region** approach. The model "anchored" searches within a 1% radius of historical peaks and "froze" low-sensitivity dimensions to maximize precision on "Master Knobs.". This has been working resonably well
+### Key Performance Milestones:
+* **High-Dimensional Scaling (Function 8 - 8D):** Achieved a **#4 global rank (9.9922)** by successfully compressing an intractable 8-dimensional hyperspace into a localized 2D coordinate search.
+* **Resilient Path Correction (Function 4 - 4D):** Successfully executed a recovery maneuver following an early exploration crash to a score of $-22.1$, utilizing localized optimization to secure a **#3 global rank (0.6899)**.
+* **Exponential Climb (Function 5 - 4D):** Discovered an aggressive upward trend line to achieve an absolute local processing yield peak of **2939.99**.
 
+---
 
+## Limitations
 
-## Performance & Metrics
-Performance is measured by the **Best Observed Value (Max $y$)** and **Stability (Minimizing Regret)**.
+* **Sparse-Data Myopia:** The model relies heavily on early sampling coverage. If the initial dataset misses a high-frequency region entirely, the Gaussian Process can construct a prematurely flattened representation of that zone.
+* **Sensitivity to Noise Calibration:** In heavily randomized environments, if the white-noise parameter is set too low, the model mistakes stochastic variations for true performance indicators, leading it to track false peaks.
+* **Curse of Dimensionality:** In higher-dimensional realms (such as the 6D and 8D spaces), the mathematical volume of the search environment expands exponentially, causing standard acquisition strategies to stall without manual coordinate reduction.
 
-| Function | Complexity | Baseline ($y_0$) | **Week 11 Peak ($y_{max}$)** | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **F5: Chemical Yield** | 4D | 1088.85 | **2808.85** | **Summit Reached** |
-| **F7: 6D Physics** | 6D | 1.36 | **2.61** | **Breakthrough** |
-| **F8: 8D Architect** | 8D | 9.97 | **9.992** | **Plateau** |
-| **F1: Radiation** | 2D | 0.03 | **0.603** | **Optimal** |
+---
 
-## Assumptions & Limitations
-* **Stationarity Assumption:** The model assumes function smoothness is consistent across the space. It may struggle with heteroscedastic noise (observed in Function 2).
-* **Exploitation Bias:** The model is heavily biased toward local refinement in final rounds, potentially missing global optima in completely unexplored quadrants.
-* **Sample Sparsity:** In 6-8D space, 20-40 points represent a significant "Curse of Dimensionality" challenge, making the model reliant on strong Gaussian priors.
+## Trade-offs
 
-
-
-## Ethical Considerations
-* **Transparency:** Detailed model cards prevent "Black-Box Obscurity." By documenting failures (like the Week 8 regressions), we provide a roadmap for future practitioners.
-* **Environmental Impact:** Prioritizing sample efficiency (20 queries) over exhaustive search reduces the carbon footprint associated with massive GPU-intensive optimisation.
+* **Safety vs. Peak Discovery (The Trust-Region Trade-off):** Implementing a localized **Hard-Bound Trust Region** after structural drops effectively ensures system safety and guarantees steady, incremental progress. However, this localized approach trades away global exploration capabilities, preventing the engine from locating alternative, potentially higher peaks across different regions of the landscape.
+* **Exploitation Speed vs. Horizon Horizons:** Shifting acquisition parameters heavily toward immediate exploitation (e.g., aggressively lowering the UCB $\kappa$ parameter) secures fast local progress, but risks trapping the model on a local ridge—as observed during the Function 5 optimization run.
