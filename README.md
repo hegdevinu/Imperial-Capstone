@@ -8,7 +8,9 @@
 > **"MY KEY LEARNING - In Black-Box Optimisation, data is expensive and cliffs are everywhere. Success is not just finding the peak; it's building the map that gets you there safely."**
 
 ---
-
+## 👥 Non-Technical Project Summary
+This project addresses the challenge of optimizing complex, hidden systems where every trial is costly and guessing blindly can lead to catastrophic failures—similar to safely maximizing warehouse space or chemical manufacturing yields without knowing the underlying formulas. By utilizing an advanced mathematical framework called Bayesian Optimisation, I built an intelligent system that learns from a minimal number of careful trials. The model maps out unknown digital landscapes, tracks its own uncertainty, and intelligently decides where to sample next. Through this deliberate process, the system successfully navigated treacherous data traps to secure top-tier performance rankings across high-dimensional target spaces.
+---
 ## 🏆 Comprehensive Leaderboard Performance Audit
 
 This table provides a transparent audit of my performance across all 8 functions. 
